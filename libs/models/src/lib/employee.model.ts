@@ -168,3 +168,14 @@ export interface EmployeeViewModel {
 	isActive?: boolean;
 	tags?: ITag[];
 }
+
+export enum EmployeeAction {
+	CREATED = 'CREATED',
+	UPDATED = 'UPDATED',
+	DELETED = 'DELETED'
+}
+
+export interface IEmployeeStoreState {
+	employee: IEmployee;
+	action: EmployeeAction;
+}
